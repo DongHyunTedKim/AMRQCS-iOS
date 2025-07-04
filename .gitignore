@@ -1,17 +1,30 @@
+# macOS
+.DS_Store
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## User settings
-xcuserdata/
-
-## Obj-C/Swift specific
+## Build artifacts
+build/
+DerivedData/
 *.hmap
-
-## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+## User settings and project files
+xcuserdata/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcworkspace
+!default.xcworkspace          # 팀에서 공유할 워크스페이스가 있으면 제외 처리 해제
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.pbxuser
+!default.pbxuser              # 공유 스킴 등을 위해 필요하면 제외 처리 해제
+!*.perspectivev3              # 사용자 뷰 설정 보존 시 제외 처리 해제
 
 ## Playgrounds
 timeline.xctimeline
@@ -22,7 +35,7 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
-# Package.resolved
+Package.resolved
 # *.xcodeproj
 #
 # Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
@@ -35,9 +48,9 @@ playground.xcworkspace
 #
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
+# https://guides.cocoapods.com/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+Pods/
+Podfile.lock
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
@@ -45,8 +58,7 @@ playground.xcworkspace
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+Carthage/Checkouts
 Carthage/Build/
 
 # fastlane
@@ -59,4 +71,14 @@ Carthage/Build/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
-fastlane/test_output
+fastlane/test_output/
+
+# User environment settings (optional)
+#
+*.swp
+*~.nib
+*.log
+
+# Credentials and security information
+#
+.env*
